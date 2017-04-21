@@ -1,5 +1,5 @@
 # Wechat_Bot
-Chatbot for Wechat 参考于
+Chatbot for Wechat 参考自 https://github.com/chiphuyen/tf-stanford-tutorials.git
 
 ## 原理
 * 根据对方的句子生成我方应答的第一个字（或词），根据对方的句子及我方应答的第一个字（或词）生成我方应答的下一个字（或词），依次类推，直至生成一句完整的句子。
