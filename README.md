@@ -2,13 +2,13 @@
 Chatbot for Wechat 参考自 https://github.com/chiphuyen/tf-stanford-tutorials.git
 
 ## 食用方法
-1. 操作系统是ubuntu（没在windows上测试过），依次安装python2.7; virtualenv（可选，帮助设置独立的python环境）; tensorflow 0.12.1；web.py ; 
-2. 准备训练文件，必须是中文，UTF-8编码，第一行为问，第二行为答，第二行为问，第三行为答，依次类推。
-3. 下载程序解压至英文路径，打开config.py，设置训练文件的DATA_PATH
-4. 在chatbot文件夹下打开终端，执行``` ~$ python data.py ```开始准备词汇表及上下文。
-5. 随后训练``` ~$ python chatbot.py --mode 'train' ```
-6. 开始对话执行``` ~$ python chatbot.py --mode 'chat' ``` 这个功能有待更新。
-7. 微信服务器设置
+1.  操作系统是ubuntu（没在windows上测试过），依次安装python2.7，virtualenv（可选，帮助设置独立的python环境）， tensorflow 0.12.1，web.py 
+2.  准备训练文件，必须是中文，UTF-8编码，第一行为问，第二行为答，第二行为问，第三行为答，依次类推。
+3.  下载程序解压至英文路径，打开config.py，设置训练文件的DATA_PATH
+4.  在chatbot文件夹下打开终端，执行``` ~$ python data.py ```开始准备词汇表及上下文。
+5.  随后训练``` ~$ python chatbot.py --mode 'train' ```
+6.  开始对话执行``` ~$ python chatbot.py --mode 'chat' ``` 这个功能有待更新。
+7.  微信服务器设置
 ---
 ## 原理
 * 根据对方的句子生成我方应答的第一个字（或词），根据对方的句子及我方应答的第一个字（或词）生成我方应答的下一个字（或词），依次类推，直至生成一句完整的句子。
@@ -27,14 +27,14 @@ Chatbot for Wechat 参考自 https://github.com/chiphuyen/tf-stanford-tutorials.
 ---
 ## Papers
 
-* Neural Probabilistic Language Model paper：http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf
+* Neural Probabilistic Language Model http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf
 
-* word2vec paper：http://arxiv.org/pdf/1301.3781.pdf
+* Word2vec http://arxiv.org/pdf/1301.3781.pdf
 
-* Recurrent Neural Network paper: https://arxiv.org/pdf/1308.0850.pdf
+* Recurrent Neural Network https://arxiv.org/pdf/1308.0850.pdf
 
-* Long short term memory paper: http://arxiv.org/abs/1409.2329
+* LSTM http://arxiv.org/abs/1409.2329
 
-* attention model paper: http://arxiv.org/abs/1412.7449
+* Attention model http://arxiv.org/abs/1412.7449
 
-* sampled softmax paper: https://arxiv.org/pdf/1412.2007v2.pdf
+* Sampled softmax https://arxiv.org/pdf/1412.2007v2.pdf
