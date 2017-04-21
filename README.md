@@ -9,7 +9,7 @@ Chatbot for Wechat 参考自 https://github.com/chiphuyen/tf-stanford-tutorials.
 5. 随后训练``` ~$ python chatbot.py --mode 'train' ```
 6. 开始对话执行``` ~$ python chatbot.py --mode 'chat' ``` 这个功能有待更新。
 7. 微信服务器设置
-
+---
 ## 原理
 * 根据对方的句子生成我方应答的第一个字（或词），根据对方的句子及我方应答的第一个字（或词）生成我方应答的下一个字（或词），依次类推，直至生成一句完整的句子。
 
