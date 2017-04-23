@@ -1,5 +1,5 @@
 # Wechat_Bot
-Chatbot for Wechat 参考自 https://github.com/chiphuyen/tf-stanford-tutorials.git
+Chatbot for Wechat 参考自stanford的一门deep learning课程练习 https://github.com/chiphuyen/tf-stanford-tutorials.git
 
 ## 食用方法
 1.  申请微信公众号，申请服务器（推荐亚马逊AWS免费使用一年），随后公众号与服务器绑定，参考https://mp.weixin.qq.com/wiki?action=doc&id=mp1472017492_58YV5&t=0.9634440120054247#1.1
@@ -41,9 +41,10 @@ Chatbot for Wechat 参考自 https://github.com/chiphuyen/tf-stanford-tutorials.
 * Sampled softmax https://arxiv.org/pdf/1412.2007v2.pdf
 
 ---
-## 未来工作
-1. 老人，小孩，男人，女人，不同的chatbot，这需要带标签的样本训练
-2. 个性化，用一个人的样本训练或者把代表一个人个性的对话样本反复多次喂给程序。
-3. 记忆力
-4. 生成回答时不用贪心算法，尝试寻找全局概率最大
-5. 可在对话中训练机器人
+## 优化方向
+1. 个性
+2. 记忆力
+3. 贪心改全局
+4. 对话中训练
+---
+## 未来 - 收集并开源一个带标签的自然语言语料库，就像http://www.image-net.org/
