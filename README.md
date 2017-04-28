@@ -58,7 +58,7 @@ Chatbot for Wechat 参考自stanford的一门deep learning课程练习 https://g
 * Blogs: https://colah.github.io/
 
 ---
-## 开发方向
+## 开发方向（大坑1号）
 1. 个性化 - 基于特定样本训练bot，使bot拥有这个特定样本的个性。
 2. 记忆力 - 这个比较难，可以尝试通过增加encoding长度及关键字提取实现。
 3. 贪心改半全局 - 用beam search使相同问句输出不同对话内容。
@@ -66,5 +66,5 @@ Chatbot for Wechat 参考自stanford的一门deep learning课程练习 https://g
 5. 图像识别 - CNN卷积神经网络跑跑alexnet...
 
 ---
-## 语聊收集
+## 语料收集（大坑2号）
 * 借鉴 http://www.image-net.org/ 上线一个中文对话语料网站，任何人都可以自由使用里面的数据。
