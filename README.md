@@ -1,5 +1,6 @@
 # Wechat_Bot
 Chatbot for Wechat 参考自stanford的一门deep learning课程练习 https://github.com/chiphuyen/tf-stanford-tutorials.git
+微信公众号：Dogfish2017
 
 ## 食用方法
 1.  申请微信公众号，申请服务器（推荐亚马逊AWS免费使用一年），随后公众号与服务器绑定，参考https://mp.weixin.qq.com/wiki?action=doc&id=mp1472017492_58YV5&t=0.9634440120054247#1.1
@@ -8,7 +9,7 @@ Chatbot for Wechat 参考自stanford的一门deep learning课程练习 https://g
 4.  下载程序解压至英文路径，打开config.py，设置处理后的语料的DATA_PATH
 5.  在chatbot文件夹下打开终端，执行``` ~$ python data.py ```程序开始按语料准备词汇表及上下文。
 6.  随后训练``` ~$ python chatbot.py --mode 'train' ```我在本地用老电脑跑了2天。
-7.  服务器打开http 80端口，开始服务``` ~$ python main.py 80 ```这里估计要用 ``` ~$ su root ```权限开80端口。
+7.  服务器打开http 80端口，开始服务``` ~$ nohup python main.py 80 &```这里估计要用 ``` ~$ su root ```权限开80端口。
 
 ---
 ## 原理
@@ -40,13 +41,30 @@ Chatbot for Wechat 参考自stanford的一门deep learning课程练习 https://g
 
 * Sampled softmax https://arxiv.org/pdf/1412.2007v2.pdf
 
+* Seq2Seq https://arxiv.org/pdf/1703.03906.pdf
+
+## Interesting web page:
+
+* Standford deep learning basic: http://deeplearning.stanford.edu/tutorial/
+
+* Standford NLP: http://web.stanford.edu/class/cs224n/
+
+* Google Seq2seq code: https://github.com/google/seq2seq
+
+* LSTM: https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+* Blogs: https://karpathy.github.io/
+
+* Blogs: https://colah.github.io/
+
 ---
-## 优化方向
+## 开发方向
 1. 个性化 - 基于特定样本训练bot，使bot拥有这个特定样本的个性。
 2. 记忆力 - 这个比较难，可以尝试通过增加encoding长度及关键字提取实现。
 3. 贪心改半全局 - 用beam search使相同问句输出不同对话内容。
 4. 对话中训练 - 可在对话中训练bot，这个比较有意思，下一步准备尝试实现。
-...
+5. 图像识别 - CNN卷积神经网络跑跑alexnet...
+
 ---
-## 未来
+## 语聊收集
 * 借鉴 http://www.image-net.org/ 上线一个中文对话语料网站，任何人都可以自由使用里面的数据。
