@@ -1,11 +1,12 @@
 # Wechat_Bot
 Chatbot for Wechat 参考自stanford的一门deep learning课程练习 https://github.com/chiphuyen/tf-stanford-tutorials.git
+
 微信公众号：Dogfish2017
 
 ## 食用方法
 1.  申请微信公众号，申请服务器（推荐亚马逊AWS免费使用一年），随后公众号与服务器绑定，参考https://mp.weixin.qq.com/wiki?action=doc&id=mp1472017492_58YV5&t=0.9634440120054247#1.1
 2.  操作系统就选ubuntu吧（没在windows上测试过），依次安装python2.7，virtualenv（可选，帮助设置独立的python环境）， tensorflow 0.12.1，web.py，tensorflow安装参考https://github.com/tensorflow/tensorflow/blob/r0.12/tensorflow/g3doc/get_started/os_setup.md 
-3.  准备训练用的语料，必须是中文，UTF-8编码，第一行为问，第二行为答，然后第二行为问，第三行为答，依次类推。语聊可从下面链接下载，但需要按上述要求处理https://github.com/rustch3n/dgk_lost_conv
+3.  准备训练用的语料，必须是中文，UTF-8编码，第一行为问，第二行为答，然后第二行为问，第三行为答，依次类推。语料可从下面链接下载，但需要按上述要求处理https://github.com/rustch3n/dgk_lost_conv
 4.  下载程序解压至英文路径，打开config.py，设置处理后的语料的DATA_PATH
 5.  在chatbot文件夹下打开终端，执行``` ~$ python data.py ```程序开始按语料准备词汇表及上下文。
 6.  随后训练``` ~$ python chatbot.py --mode 'train' ```我在本地用老电脑跑了2天。
@@ -61,10 +62,11 @@ Chatbot for Wechat 参考自stanford的一门deep learning课程练习 https://g
 ## 开发方向（大坑1号）
 1. 个性化 - 基于特定样本训练bot，使bot拥有这个特定样本的个性。
 2. 记忆力 - 这个比较难，可以尝试通过增加encoding长度及关键字提取实现。
-3. 贪心改半全局 - 用beam search使相同问句输出不同对话内容。
+3. 贪心改全局 - 生成对话时用beam search使输出的句子全局最优。
 4. 对话中训练 - 可在对话中训练bot，这个比较有意思，下一步准备尝试实现。
-5. 图像识别 - CNN卷积神经网络跑跑alexnet...
+5. 图像识别 - CNN卷积神经网络跑跑alexnet...可以读取图像进行反馈。
 
 ---
 ## 语料收集（大坑2号）
-* 借鉴 http://www.image-net.org/ 上线一个中文对话语料网站，任何人都可以自由使用里面的数据。
+* 我们每天产生的语料是相当庞大的，但是语料的收集涉及隐私所以很困难。如果你想献身科学，可以把聊天记录发我邮箱 nlp_resource@163.com
+* 准备借鉴 http://www.image-net.org/ 上线一个中文对话语料网站，任何人都可以自由使用里面的数据。
